@@ -1,0 +1,29 @@
+{
+  "name": "purpletech-landing-page",
+  "version": "1.0.0",
+  "description": "Landing page da PurpleTech",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "start": "next start"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/souzajr/purpletech-landing-page.git"
+  },
+  "keywords": [
+    "Landing Page",
+    "ReactJS",
+    "NextJS"
+  ],
+  "author": "Roberto Souza",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/souzajr/purpletech-landing-page/issues"
+  },
+  "dependencies": {
+    "next": "^9.0.3",
+    "react": "^16.9.0",
+    "react-dom": "^16.9.0"
+  }
+}
