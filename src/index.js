@@ -1,12 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { BrowserRouter, Route, Switch } from 'react-router-dom'
-import App from './components/App'
-import PageNotFound from './components/PageNotFound'
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import App from './components/App';
+import PageNotFound from './components/PageNotFound';
 
-import './assets/vendor/nucleo/css/nucleo.css'
-import './assets/vendor/font-awesome/css/font-awesome.min.css'
-import './assets/scss/purpletech-design-system-react.scss'
+import './assets/vendor/nucleo/css/nucleo.css';
+import './assets/vendor/font-awesome/css/font-awesome.min.css';
+import './assets/scss/purpletech-design-system-react.scss';
 
 ReactDOM.render(
   <BrowserRouter>
@@ -15,4 +15,5 @@ ReactDOM.render(
       <Route path="*" component={PageNotFound} />
     </Switch>
   </BrowserRouter>,
-document.getElementById('root'))
+  document.getElementById('root'),
+);
