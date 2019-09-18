@@ -1,15 +1,15 @@
 ## [PurpleTech - Landing Page](https://purpletech.com.br)
 
-![Status](https://img.shields.io/badge/status-under%20development-orange.svg) ![Platform](https://img.shields.io/badge/platform-linux--64%20%7C%20win--64%20%7C%20osx--64-lightgrey.svg) ![NodeVersion](https://img.shields.io/badge/NodeJS-%3E%3D%208.0-blue.svg)
+![Status](https://img.shields.io/badge/status-under%20development-orange.svg) ![Platform](https://img.shields.io/badge/platform-linux--64%20%7C%20win--64%20%7C%20osx--64-lightgrey.svg)
 
-![Dashboard](https://i.imgur.com/AssHdjd.png)
+![Dashboard](https://i.imgur.com/nfPfXVS.png)
 
 - Demo: https://purpletech.com.br
 
 ### Projeto construído com:
 
 ```bash
-React.JS / Next.JS / Bootstrap
+React.JS / React Hooks / Bootstrap
 ```
 
 ### Configuração e instalação
@@ -20,11 +20,11 @@ $ git clone https://github.com/souzajr/purpletech-landing-page
 ```
 2) Instalação usando npm / yarn
 ```bash
-$ npm install / yarn add
+$ npm install / yarn install
 ```
 3) Iniciando e acessando o projeto após a instalação
 ```bash
-$ npm run dev
+$ npm start / yarn start
 ```
 ```bash
 Acesse http://localhost:3000
