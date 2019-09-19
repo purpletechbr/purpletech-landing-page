@@ -17,7 +17,7 @@ class App extends React.Component {
   render() {
     return (
       <>
-        <NavBar />
+        <NavBar page="primary" />
         <main ref="main">
           <Slide />
           <Cards />

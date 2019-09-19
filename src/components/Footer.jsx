@@ -82,7 +82,7 @@ function Footer() {
             <div className="col-md-6">
               <ul className="nav nav-footer justify-content-end">
                 <li className="nav-item">
-                  <a rel="noopener noreferrer" href="https://github.com/purpletechbr" className="nav-link" target="_blank">Veja este projeto no Github</a>
+                  <a href="/politica-de-privacidade" className="nav-link">Política de privacidade</a>
                 </li>
               </ul>
             </div>

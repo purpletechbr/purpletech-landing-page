@@ -76,23 +76,39 @@ class NavBar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <NavLink href="#Home" nav>
+                  <NavLink
+                    href={this.props.page === 'primary' ? '#Home' : '/'}
+                    nav
+                  >
                     <i className="ni ni-atom d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Home</span>
                   </NavLink>
-                  <NavLink href="#Servicos" nav>
+                  <NavLink
+                    href={this.props.page === 'primary' ? '#Servicos' : '/#Servicos'}
+                    nav
+                  >
                     <i className="ni ni-ruler-pencil d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Serviços</span>
                   </NavLink>
-                  <NavLink href="#Portfolio" nav>
+                  <NavLink
+                    href={this.props.page === 'primary' ? '#Portfolio' : '/#Portfolio'}
+                    nav
+                  >
                     <i className="ni ni-spaceship d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Portfólio</span>
                   </NavLink>
-                  <NavLink href="#Contato" nav>
+                  <NavLink
+                    href={this.props.page === 'primary' ? '#Contato' : '/#Contato'}
+                    nav
+                  >
                     <i className="ni ni-notification-70 d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Contato</span>
                   </NavLink>
-                  <NavLink className="fix-navLink" href="https://app.purpletech.com.br" nav>
+                  <NavLink
+                    className="fix-navLink"
+                    href="https://app.purpletech.com.br"
+                    nav
+                  >
                     <Button
                       className="btn-neutral btn-icon"
                       color="default"
