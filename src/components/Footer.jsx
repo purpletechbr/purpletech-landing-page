@@ -1,8 +1,6 @@
 import React from 'react';
 
 function Footer() {
-  const currentYear = new Date().getFullYear();
-
   return (
     <>
       <style jsx>
@@ -74,7 +72,7 @@ function Footer() {
             <div className="col-md-6">
               <div className="copyright">
                 ©&nbsp;
-                {currentYear}
+                {new Date().getFullYear()}
                 &nbsp;
                 PurpleTech.
               </div>
