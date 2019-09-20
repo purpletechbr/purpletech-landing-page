@@ -23,7 +23,7 @@ class PageNotFound extends React.Component {
             <br />
                 Desculpe, mas a página que você está procurando não existe.
           </h2>
-          <p>
+          <p className="lead text-muted">
                 Por favor, verifique o endereço digitado e tente novamente ou
           </p>
           <a href="/" className="btn-default mb-3 mb-sm-0 btn">volte para a home</a>

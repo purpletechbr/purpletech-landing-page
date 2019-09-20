@@ -3,48 +3,6 @@ import React from 'react';
 function Footer() {
   return (
     <>
-      <style jsx>
-        {`
-          .btn-whatsapp  {
-              color: #fff;
-              border-color: #25d366;
-              background-color: #25d366;
-              box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-          }
-
-          .btn-whatsapp:hover {
-              color: #fff;
-              border-color: #25d366;
-              background-color: #25d366;
-          }
-
-          .btn-whatsapp:active, .btn-whatsapp.active {
-              color: #fff !important;
-              border-color: #25d366 !important;
-              background-color: #25d366 !important;
-          }
-
-          .btn-behance  {
-              color: #fff;
-              border-color: #0057ff;
-              background-color: #0057ff;
-              box-shadow: 0 4px 6px rgba(50, 50, 93, .11), 0 1px 3px rgba(0, 0, 0, .08);
-          }
-
-          .btn-behance:hover {
-              color: #fff;
-              border-color: #0057ff;
-              background-color: #0057ff;
-          }
-
-          .btn-behance:active, .btn-behance.active {
-              color: #fff !important;
-              border-color: #0057ff !important;
-              background-color: #0057ff !important;
-          }
-        `}
-      </style>
-
       <footer className="footer has-cards">
         <div className="container">
           <div className="row row-grid align-items-center my-md">

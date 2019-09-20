@@ -9,15 +9,6 @@ import {
 
 const Cards = () => (
   <>
-    <style jsx>
-      {`
-        .custom-icon {
-            height: 60px;
-            width: 60px;
-        }
-      `}
-    </style>
-
     <section id="SaibaMais" className="section section-lg pt-lg-0 mt--150">
       <Container>
         <Row className="justify-content-center">

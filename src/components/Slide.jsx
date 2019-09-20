@@ -8,15 +8,6 @@ import {
 
 const Slide = () => (
   <>
-    <style jsx>
-      {`
-        .fix-height-section {
-            height: 880px;
-        }
-      `}
-
-    </style>
-
     <div className="position-relative" id="Home">
       <section className="fix-height-section section-profile-cover section-shaped my-0 mt-100">
         <div className="shape shape-style-1 shape-primary alpha-4">

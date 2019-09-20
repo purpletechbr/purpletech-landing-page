@@ -23,23 +23,6 @@ class NavBar extends React.Component {
   render() {
     return (
       <>
-        <style jsx>
-          {`
-            @media screen and (min-width: 992px) {
-              .fix-navLink {
-                display: none;
-              }
-            }
-
-            @media screen and (max-width: 992px) {
-              .fix-navLink {
-                display: block;
-                text-align: center;
-              }
-            }
-          `}
-        </style>
-
         <header className="header-global">
           <Navbar
             className="navbar-main navbar-transparent navbar-light headroom"

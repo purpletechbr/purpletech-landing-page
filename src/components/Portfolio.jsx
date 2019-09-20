@@ -2,14 +2,6 @@ import React from 'react';
 
 const Portfolio = () => (
   <>
-    <style jsx>
-      {`
-        .custom-card {
-            width: 18rem;
-        }
-      `}
-    </style>
-
     <section id="Portfolio" className="section bg-secondary section-lg">
       <div className="container">
         <div className="row justify-content-center text-center mb-lg">
