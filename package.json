@@ -2,13 +2,18 @@
   "name": "purpletech-landing-page",
   "version": "1.0.0",
   "dependencies": {
+    "axios": "^0.19.0",
     "classnames": "^2.2.6",
     "headroom.js": "^0.9.4",
     "react": "^16.9.0",
+    "react-anchor-link-smooth-scroll": "^1.0.12",
     "react-dom": "^16.9.0",
+    "react-image-lightbox": "^5.1.0",
+    "react-input-mask": "^2.0.4",
     "react-router": "^5.0.1",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.1.1",
+    "react-toastify": "^5.3.2",
     "reactstrap": "^8.0.1"
   },
   "scripts": {

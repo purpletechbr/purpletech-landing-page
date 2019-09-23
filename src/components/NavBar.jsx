@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import Headroom from 'headroom.js';
 import {
   Button,
@@ -7,7 +8,6 @@ import {
   NavbarBrand,
   Navbar,
   NavItem,
-  NavLink,
   Nav,
   Container,
   Row,
@@ -59,38 +59,37 @@ class NavBar extends React.Component {
                   </Row>
                 </div>
                 <Nav className="navbar-nav-hover align-items-lg-center" navbar>
-                  <NavLink
+                  <AnchorLink
+                    className="nav-link"
                     href={this.props.page === 'primary' ? '#Home' : '/'}
-                    nav
                   >
                     <i className="ni ni-atom d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Home</span>
-                  </NavLink>
-                  <NavLink
+                  </AnchorLink>
+                  <AnchorLink
+                    className="nav-link"
                     href={this.props.page === 'primary' ? '#Servicos' : '/#Servicos'}
-                    nav
                   >
                     <i className="ni ni-ruler-pencil d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Serviços</span>
-                  </NavLink>
-                  <NavLink
+                  </AnchorLink>
+                  <AnchorLink
+                    className="nav-link"
                     href={this.props.page === 'primary' ? '#Portfolio' : '/#Portfolio'}
-                    nav
                   >
                     <i className="ni ni-spaceship d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Portfólio</span>
-                  </NavLink>
-                  <NavLink
+                  </AnchorLink>
+                  <AnchorLink
+                    className="nav-link"
                     href={this.props.page === 'primary' ? '#Contato' : '/#Contato'}
-                    nav
                   >
                     <i className="ni ni-notification-70 d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Contato</span>
-                  </NavLink>
-                  <NavLink
-                    className="fix-navLink"
+                  </AnchorLink>
+                  <AnchorLink
+                    className="nav-link fix-navLink"
                     href="https://app.purpletech.com.br"
-                    nav
                   >
                     <Button
                       className="btn-neutral btn-icon"
@@ -103,7 +102,7 @@ class NavBar extends React.Component {
                         Solicitar orçamento
                       </span>
                     </Button>
-                  </NavLink>
+                  </AnchorLink>
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem className="d-none d-lg-block ml-lg-4">

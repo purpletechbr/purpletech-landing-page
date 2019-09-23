@@ -18,7 +18,7 @@ class PrivacyPolicy extends React.Component {
   render() {
     return (
       <>
-        <style jsx>
+        <style>
           {`
             p {
               text-align: justify;
@@ -60,17 +60,17 @@ class PrivacyPolicy extends React.Component {
             </section>
           </div>
           <section id="Servicos" className="section section-lg">
-            <div className="container">
-              <div className="row justify-content-center mb-lg">
-                <div className="col-lg-12">
+            <Container>
+              <Row className="justify-content-center mb-lg">
+                <Col lg="12">
                   <h4>SEÇÃO 1 – O QUE FAREMOS COM ESTA INFORMAÇÃO?</h4>
                   <p className="lead text-muted">
                     Quando você acessa nosso site, também recebemos automaticamente o protocolo de internet do seu computador, endereço de IP, a fim de obter informações que nos ajudam a aprender sobre seu navegador e sistema operacional.
                     <br />
                     Email Marketing será realizado apenas caso você permita. Nestes emails você poderá receber notícia sobre nosso site e outras atualizações.
                   </p>
-                </div>
-                <div className="col-lg-12">
+                </Col>
+                <Col lg="12">
                   <h4>SEÇÃO 2 – CONSENTIMENTO</h4>
                   <p className="lead text-muted">
                     Obtemos seu consentimento quando você fornece informações pessoais como nome, telefone e endereço. Após a realização dessas ações entendemos que você está de acordo com a coleta de dados para serem utilizados pela nossa empresa.
@@ -83,14 +83,14 @@ class PrivacyPolicy extends React.Component {
                     </a>
                     .
                   </p>
-                </div>
-                <div className="col-lg-12">
+                </Col>
+                <Col lg="12">
                   <h4>SEÇÃO 3 – DIVULGAÇÃO</h4>
                   <p className="lead text-muted">
                     Podemos divulgar suas informações pessoais caso sejamos obrigados pela lei ou se você violar nossa Política de Privacidade.
                   </p>
-                </div>
-                <div className="col-lg-12">
+                </Col>
+                <Col lg="12">
                   <h4>SEÇÃO 4 – SERVIÇOS DE TERCEIROS</h4>
                   <p className="lead text-muted">
                     No geral, os fornecedores terceirizados usados por nós irão apenas coletar, usar e divulgar suas informações na medida do necessário para permitir que eles realizem os serviços que eles nos fornecem.
@@ -107,25 +107,25 @@ class PrivacyPolicy extends React.Component {
                     <br />
                     Quando você clica em links no nosso site, eles podem lhe direcionar para fora do nosso site. Não somos responsáveis pelas práticas de privacidade de outros sites e lhe incentivamos a ler as declarações de privacidade deles.
                   </p>
-                </div>
-                <div className="col-lg-12">
+                </Col>
+                <Col lg="12">
                   <h4>SEÇÃO 5 – SEGURANÇA</h4>
                   <p className="lead text-muted">
                     Para proteger suas informações pessoais, tomamos precauções razoáveis e seguimos as melhores práticas da indústria para nos certificar que elas não serão perdidas inadequadamente, usurpadas, acessadas, divulgadas, alteradas ou destruídas.
                     <br />
                     Se você nos fornecer as suas informações de cartão de crédito, essa informação será criptografada usando tecnologia “secure socket layer” (SSL) e armazenada com uma criptografia AES-256. Embora nenhum método de transmissão pela Internet ou armazenamento eletrônico é 100% seguro, nós seguimos todos os requisitos da PCI-DSS e implementamos padrões adicionais geralmente aceitos pela indústria.
                   </p>
-                </div>
-                <div className="col-lg-12">
+                </Col>
+                <Col lg="12">
                   <h4>SEÇÃO 6 – ALTERAÇÕES PARA ESSA POLÍTICA DE PRIVACIDADE</h4>
                   <p className="lead text-muted">
                     Reservamos o direito de modificar essa política de privacidade a qualquer momento, então por favor, revise-a com frequência. Alterações e esclarecimentos vão surtir efeito imediatamente após sua publicação no site. Se fizermos alterações de materiais para essa política, iremos notificá-lo aqui que eles foram atualizados, para que você tenha ciência sobre quais informações coletamos, como as usamos, e sob que circunstâncias, se alguma, usamos e/ou divulgamos elas.
                     <br />
                     Se nosso site for adquirido ou fundido com outra empresa, suas informações podem ser transferidas para os novos proprietários.
                   </p>
-                </div>
-              </div>
-            </div>
+                </Col>
+              </Row>
+            </Container>
           </section>
         </main>
         <Footer />

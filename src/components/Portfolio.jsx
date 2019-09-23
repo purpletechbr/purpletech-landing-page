@@ -1,61 +1,122 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
+import { getPortfolio } from '../services'
+import {
+  Card,
+  CardBody,
+  CardImg,
+  CardText,
+  CardTitle,
+  Container,
+  Row,
+  Col,
+} from 'reactstrap';
 
-const Portfolio = () => (
-  <>
-    <section id="Portfolio" className="section bg-secondary section-lg">
-      <div className="container">
-        <div className="row justify-content-center text-center mb-lg">
-          <div className="col-lg-8">
-            <h2 className="display-3">Portfólio</h2>
-            <p className="lead text-muted">Confira alguns projetos feitos pela PurpleTech.</p>
-          </div>
-        </div>
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card custom-card">
-              <img className="card-img-top" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-1-800x800.jpg" alt="" />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" className="btn btn-primary">Detalhes</a>
-                <a href="#!" className="float-right mt-2">Ver site</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card custom-card">
-              <img className="card-img-top" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-1-800x800.jpg" alt="" />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" className="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4">
-            <div className="card custom-card">
-              <img className="card-img-top" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-1-800x800.jpg" alt="" />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" className="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-4 mt-5">
-            <div className="card custom-card">
-              <img className="card-img-top" src="https://demos.creative-tim.com/argon-dashboard/assets/img/theme/team-1-800x800.jpg" alt="" />
-              <div className="card-body">
-                <h5 className="card-title">Card title</h5>
-                <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-                <a href="#!" className="btn btn-primary">Go somewhere</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  </>
-);
+function Portfolio() {
+  const [photoIndex, setPhotoIndex] = useState(0);
+  const [isOpen, setIsOpen] = useState(false);
+  const [currentCustomer, setCurrentCustomer] = useState('');
+  const [customers, setCustomers] = useState('');
+
+  useEffect(() => {
+    getPortfolio()
+      .then((response) => setCustomers(response.data))
+      .catch(() => setCustomers(''))
+  }, [])
+
+  function handleDetails(index) {
+    setCurrentCustomer(customers[index]);
+    setIsOpen(true);
+  }
+
+  return (
+    <>
+      {isOpen && (
+        <Lightbox
+          mainSrc={currentCustomer.images[photoIndex]}
+          nextSrc={
+            currentCustomer.images[(photoIndex + 1) %
+              currentCustomer.images.length]
+          }
+          prevSrc={
+            currentCustomer.images[(photoIndex +
+              currentCustomer.images.length - 1) %
+              currentCustomer.images.length]
+          }
+          imageTitle={currentCustomer.name}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex(
+              (photoIndex + currentCustomer.images.length - 1) %
+                currentCustomer.images.length
+            )
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex(
+              (photoIndex + 1) % currentCustomer.images.length
+            )
+          }
+        />
+      )}
+
+      <section id="Portfolio" className="section bg-secondary section-lg">
+        <Container>
+          <Row className="justify-content-center text-center mb-lg">
+            <Col lg="8">
+              <h2 className="display-3">
+                Portfólio
+              </h2>
+              <p className="lead text-muted">
+                Confira alguns projetos feitos pela PurpleTech.
+              </p>
+            </Col>
+          </Row>
+          <Row>
+            {customers.length ? customers.map((custumer, index) => (
+              <Col
+                key={custumer._id}
+                md="4"
+                className="mt-sm"
+              >
+                <Card className="custom-card">
+                  <CardImg
+                    onClick={() => handleDetails(index)}
+                    src={custumer.images[0]}
+                  />
+                  <CardBody>
+                    <h5>
+                      <CardTitle>
+                        {custumer.name}
+                      </CardTitle>
+                    </h5>
+                    <CardText>
+                      {custumer.description}
+                    </CardText>
+                    <a
+                      onClick={() => handleDetails(index)}
+                      href="#!"
+                      className="btn btn-primary"
+                    >
+                      Detalhes
+                    </a>
+                    <a
+                      rel="noopener noreferrer"
+                      target="_blank"
+                      href={custumer.url}
+                      className="float-right mt-2"
+                    >
+                      Ver site
+                    </a>
+                  </CardBody>
+                </Card>
+              </Col>
+            )) : <h3>Carregando...</h3>}
+          </Row>
+        </Container>
+      </section>
+    </>
+  );
+}
 
 export default Portfolio;

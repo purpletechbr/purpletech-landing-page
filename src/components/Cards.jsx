@@ -72,7 +72,7 @@ const Cards = () => (
                       ESCALABILIDADE
                     </h6>
                     <p className="description mt-3">
-                      Com tecnologia de ponta, seu site estará pronto para qualquer demanda.
+                      Com tecnologia cloud first, seu site estará pronto para qualquer demanda.
                     </p>
                     <hr />
                   </CardBody>

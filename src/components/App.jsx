@@ -6,6 +6,7 @@ import Services from './Services';
 import Portfolio from './Portfolio';
 import Contact from './Contact';
 import Footer from './Footer';
+import WPPButton from './WPPButton';
 
 class App extends React.Component {
   componentDidMount() {
@@ -26,6 +27,7 @@ class App extends React.Component {
           <Contact />
         </main>
         <Footer />
+        <WPPButton />
       </>
     );
   }

@@ -1,6 +1,6 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
 import {
-  Button,
   Container,
   Row,
   Col,
@@ -32,14 +32,14 @@ const Slide = () => (
                 </h1>
                 <p className="lead text-white">Construímos sistemas inteligentes, modernos e práticos para as suas necessidades. Com uma equipe preparada e tecnologia de ponta, entregamos a escalabilidade e segurança que a sua ideia precisa.</p>
                 <div className="btn-wrapper">
-                  <Button className="btn-info btn-icon mb-3 mb-sm-0" href="#SaibaMais">
+                  <AnchorLink offset="100" className="btn btn-info btn-icon mb-3 mb-sm-0" href="#SaibaMais">
                     <span className="btn-inner--icon"><i className="fa fa-code" /></span>
                     <span className="btn-inner--text">Saiba mais</span>
-                  </Button>
-                  <Button className="btn-white btn-icon mb-3 mb-sm-0" href="#">
+                  </AnchorLink>
+                  <AnchorLink offset="100" className="btn btn-white btn-icon mb-3 mb-sm-0" href="#MandeUmaMensagem">
                     <span className="btn-inner--icon"><i className="fa fa-envelope" /></span>
                     <span className="btn-inner--text">Mande uma mensagem</span>
-                  </Button>
+                  </AnchorLink>
                 </div>
               </Col>
             </Row>
