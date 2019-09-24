@@ -70,7 +70,7 @@ const Services = () => (
                       </div>
                     </div>
                     <div>
-                      <h6 className="mb-0">Safistação garantida</h6>
+                      <h6 className="mb-0">Satisfação garantida</h6>
                     </div>
                   </div>
                 </li>
@@ -177,10 +177,15 @@ const Services = () => (
                 <i className="ni ni-building" />
               </div>
               <h3>Sistemas seguros, robustos e amigáveis para atenderem às suas necessidades</h3>
-              <p className="lead" />
-              <p className="lead">Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.</p>
-              <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-              <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
+              <p className="lead">
+                Nós trabalhamos com metodologias ágeis que permitem um rápido desenvolvimento, colocando seu projeto no ar em pouquíssimo tempo.
+              </p>
+              <p>
+                Seja para sua loja ou escritório, nós temos a solução ideal e com preços competitivos para que você tenha o melhor custo-benefício.
+              </p>
+              <p>
+                Desenvolvemos aplicações para todos os tamanhos de empresa, da pequena à grande, com a mesma seriedade e qualidade.
+              </p>
               <p className="mt-5">
                 <AnchorLink
                   className="font-weight-bold text-warning"

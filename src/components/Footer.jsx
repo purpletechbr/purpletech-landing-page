@@ -68,7 +68,7 @@ const Footer = () => (
               ©&nbsp;
               {new Date().getFullYear()}
               &nbsp;
-              PurpleTech.
+              PurpleTech
             </div>
           </Col>
           <Col md="6">
