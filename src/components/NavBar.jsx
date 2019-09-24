@@ -30,7 +30,11 @@ class NavBar extends React.Component {
             id="navbar-main"
           >
             <Container>
-              <NavbarBrand className="mr-lg-5" to="/" tag={Link}>
+              <NavbarBrand
+                className="mr-lg-5"
+                to={this.props.page === 'primary' ? '#!' : '/'}
+                tag={Link}
+              >
                 <img
                   alt="Logotipo"
                   src={require('../assets/logo-white.svg')}
@@ -43,7 +47,7 @@ class NavBar extends React.Component {
                 <div className="navbar-collapse-header">
                   <Row>
                     <Col className="collapse-brand" xs="6">
-                      <Link to="/">
+                      <Link to={this.props.page === 'primary' ? '#!' : '/'}>
                         <img
                           alt="Logotipo"
                           src={require('../assets/logo.svg')}
@@ -87,7 +91,7 @@ class NavBar extends React.Component {
                     <i className="ni ni-notification-70 d-lg-none mr-1" />
                     <span className="nav-link-inner--text">Contato</span>
                   </AnchorLink>
-                  <AnchorLink
+                  <a
                     className="nav-link fix-navLink"
                     href="https://app.purpletech.com.br"
                   >
@@ -102,7 +106,7 @@ class NavBar extends React.Component {
                         Solicitar orçamento
                       </span>
                     </Button>
-                  </AnchorLink>
+                  </a>
                 </Nav>
                 <Nav className="align-items-lg-center ml-lg-auto" navbar>
                   <NavItem className="d-none d-lg-block ml-lg-4">
