@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Lightbox from 'react-image-lightbox';
 import 'react-image-lightbox/style.css';
-import { getPortfolio } from '../services'
 import {
   Card,
   CardBody,
@@ -12,6 +11,7 @@ import {
   Row,
   Col,
 } from 'reactstrap';
+import { getPortfolio } from '../services';
 
 function Portfolio() {
   const [photoIndex, setPhotoIndex] = useState(0);
@@ -22,8 +22,8 @@ function Portfolio() {
   useEffect(() => {
     getPortfolio()
       .then((response) => setCustomers(response.data))
-      .catch(() => setCustomers(''))
-  }, [])
+      .catch(() => setCustomers(''));
+  }, []);
 
   function handleDetails(index) {
     setCurrentCustomer(customers[index]);
@@ -36,27 +36,23 @@ function Portfolio() {
         <Lightbox
           mainSrc={currentCustomer.images[photoIndex]}
           nextSrc={
-            currentCustomer.images[(photoIndex + 1) %
-              currentCustomer.images.length]
+            currentCustomer.images[(photoIndex + 1)
+              % currentCustomer.images.length]
           }
           prevSrc={
-            currentCustomer.images[(photoIndex +
-              currentCustomer.images.length - 1) %
-              currentCustomer.images.length]
+            currentCustomer.images[(photoIndex
+              + currentCustomer.images.length - 1)
+              % currentCustomer.images.length]
           }
           imageTitle={currentCustomer.name}
           onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex(
-              (photoIndex + currentCustomer.images.length - 1) %
-                currentCustomer.images.length
-            )
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex(
-              (photoIndex + 1) % currentCustomer.images.length
-            )
-          }
+          onMovePrevRequest={() => setPhotoIndex(
+            (photoIndex + currentCustomer.images.length - 1)
+                % currentCustomer.images.length,
+          )}
+          onMoveNextRequest={() => setPhotoIndex(
+            (photoIndex + 1) % currentCustomer.images.length,
+          )}
         />
       )}
 
@@ -68,7 +64,7 @@ function Portfolio() {
                 Portfólio
               </h2>
               <p className="lead text-muted">
-                Confira alguns projetos feitos pela PurpleTech.
+                Confira alguns projetos feitos pela PurpleTech. Nossa equipe
               </p>
             </Col>
           </Row>
@@ -79,8 +75,9 @@ function Portfolio() {
                 md="4"
                 className="mt-sm"
               >
-                <Card className="custom-card">
+                <Card className="custom-card shadow shadow-lg--hover">
                   <CardImg
+                    alt={custumer.name}
                     onClick={() => handleDetails(index)}
                     src={custumer.images[0]}
                   />

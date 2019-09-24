@@ -1,20 +1,35 @@
 import React from 'react';
+import AnchorLink from 'react-anchor-link-smooth-scroll';
+import {
+  Card,
+  CardBody,
+  CardImg,
+  Container,
+  Row,
+  Col,
+} from 'reactstrap';
 
 const Services = () => (
   <>
     <section id="Servicos" className="section section-lg">
-      <div className="container">
-        <div className="row justify-content-center text-center mb-lg">
-          <div className="col-lg-8">
+      <Container>
+        <Row className="justify-content-center text-center mb-lg">
+          <Col lg="8">
             <h2 className="display-3">O que nós oferecemos?</h2>
-            <p className="lead text-muted">A PurpleTech atua há três anos no mercado com seriedade e excelência no atendimento para dar vida a sua ideia e potencializar seu sucesso.</p>
-          </div>
-        </div>
-        <div className="row row-grid align-items-center">
-          <div className="col-md-6 order-md-2">
-            <img alt="Desenvolvimento web" src={require('../assets/img/desenvolvimento-web.png')} className="img-fluid floating" />
-          </div>
-          <div className="col-md-6 order-md-1">
+            <p className="lead text-muted">
+              A PurpleTech atua há três anos no mercado com seriedade e excelência no atendimento para dar vida a sua ideia e potencializar seu sucesso.
+            </p>
+          </Col>
+        </Row>
+        <Row className="row-grid align-items-center">
+          <Col md="6" className="order-md-2">
+            <img
+              alt="Desenvolvimento web"
+              src={require('../assets/img/desenvolvimento-web.png')}
+              className="img-fluid floating"
+            />
+          </Col>
+          <Col md="6" className="order-md-1">
             <div className="pr-md-5">
               <div className="icon icon-lg icon-shape icon-shape-success shadow rounded-circle mb-5">
                 <i className="ni ni-spaceship" />
@@ -61,19 +76,23 @@ const Services = () => (
                 </li>
               </ul>
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
     <section className="section pb-0 bg-gradient-warning">
-      <div className="container">
-        <div className="row row-grid align-items-center">
-          <div className="col-md-6 order-lg-2 ml-lg-auto">
+      <Container>
+        <Row className="row-grid align-items-center">
+          <Col lg="6" className="order-lg-2 ml-lg-auto">
             <div className="position-relative pl-md-5">
-              <img alt="Desenvolvimento de app" src={require('../assets/img/desenvolvimento-app.png')} className="img-center img-fluid" />
+              <img
+                alt="Desenvolvimento de app"
+                src={require('../assets/img/desenvolvimento-app.png')}
+                className="img-center img-fluid"
+              />
             </div>
-          </div>
-          <div className="col-lg-6 order-lg-1">
+          </Col>
+          <Col lg="6" className="order-lg-1">
             <div className="d-flex px-3">
               <div>
                 <div className="icon icon-lg icon-shape bg-gradient-white shadow rounded-circle text-primary">
@@ -82,11 +101,13 @@ const Services = () => (
               </div>
               <div className="pl-4">
                 <h4 className="display-3 text-white">App Development</h4>
-                <p className="text-white">Desenvolvimento e criação de aplicativos para Android e iOS. Venda, monitore e controle seu negócio de qualquer lugar: integre sua plataforma web para dispositivos mobile.</p>
+                <p className="text-white">
+                  Desenvolvimento e criação de aplicativos para Android e iOS. Venda, monitore e controle seu negócio de qualquer lugar: integre sua plataforma web para dispositivos mobile.
+                </p>
               </div>
             </div>
-            <div className="card shadow shadow-lg--hover mt-5">
-              <div className="card-body">
+            <Card className="shadow shadow-lg--hover mt-5">
+              <CardBody>
                 <div className="d-flex px-3">
                   <div>
                     <div className="icon icon-shape bg-gradient-success rounded-circle text-white">
@@ -95,13 +116,15 @@ const Services = () => (
                   </div>
                   <div className="pl-4">
                     <h5 className="title text-success">Sua loja em um aplicativo</h5>
-                    <p>Segundo estudos feitos pelo Google, o acesso à internet é majoriariamente mobile. Ofereça seus serviços e produtos através de um app e aumente sua conversão de vendas.</p>
+                    <p>
+                      Segundo estudos feitos pelo Google, o acesso à internet é majoriariamente mobile. Ofereça seus serviços e produtos através de um app e aumente sua conversão de vendas.
+                    </p>
                   </div>
                 </div>
-              </div>
-            </div>
-            <div className="card shadow shadow-lg--hover mt-5">
-              <div className="card-body">
+              </CardBody>
+            </Card>
+            <Card className="shadow shadow-lg--hover mt-5">
+              <CardBody>
                 <div className="d-flex px-3">
                   <div>
                     <div className="icon icon-shape bg-gradient-warning rounded-circle text-white">
@@ -113,11 +136,11 @@ const Services = () => (
                     <p>Dê o próximo passo além da web, ofereça para seus clientes um aplicativo moderno, bonito, rápido e seguro.</p>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+              </CardBody>
+            </Card>
+          </Col>
+        </Row>
+      </Container>
       {/* SVG separator */}
       <div className="separator separator-bottom separator-skew zindex-100">
         <svg x="0" y="0" viewBox="0 0 2560 100" preserveAspectRatio="none" version="1.1" xmlns="http://www.w3.org/2000/svg">
@@ -126,22 +149,29 @@ const Services = () => (
       </div>
     </section>
     <section className="section section-lg">
-      <div className="container">
-        <div className="row row-grid align-items-center">
-          <div className="col-md-6">
-            <div className="card bg-default shadow border-0">
-              <img alt="Web development" src={require('../assets/img/home_webdeveloper.jpg')} className="card-img-top" />
+      <Container>
+        <Row className="row-grid align-items-center">
+          <Col md="6">
+            <Card className="bg-default shadow border-0">
+              <CardImg
+                alt="Web development"
+                src={require('../assets/img/home_webdeveloper.jpg')}
+              />
               <blockquote className="card-blockquote">
                 <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" className="svg-bg">
                   <polygon points="0,52 583,95 0,95" className="fill-default" />
                   <polygon points="0,42 583,95 683,0 0,95" opacity=".2" className="fill-default" />
                 </svg>
-                <h4 className="display-3 font-weight-bold text-white">Tech Development</h4>
-                <p className="lead text-italic text-white">Aplicações para web desenvolvidas com ferramentas modernas. Em fase final de construção, testes rigorosos de qualidade e estabilidade são aplicados garantindo, assim, um produto final de alto nível.</p>
+                <h4 className="display-3 font-weight-bold text-white">
+                  Tech Development
+                </h4>
+                <p className="lead text-italic text-white">
+                  Aplicações para web desenvolvidas com ferramentas modernas. Em fase final de construção, testes rigorosos de qualidade e estabilidade são aplicados garantindo, assim, um produto final de alto nível.
+                </p>
               </blockquote>
-            </div>
-          </div>
-          <div className="col-md-6">
+            </Card>
+          </Col>
+          <Col md="6">
             <div className="pl-md-5">
               <div className="icon icon-lg icon-shape icon-shape-warning shadow rounded-circle mb-5">
                 <i className="ni ni-building" />
@@ -151,11 +181,18 @@ const Services = () => (
               <p className="lead">Don't let your uses guess by attaching tooltips and popoves to any element. Just make sure you enable them first via JavaScript.</p>
               <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
               <p>The kit comes with three pre-built pages to help you get started faster. You can change the text and images and you're good to go.</p>
-              <p className="font-weight-bold text-warning mt-5">A beautiful UI Kit for impactful websites</p>
+              <p className="mt-5">
+                <AnchorLink
+                  className="font-weight-bold text-warning"
+                  href="#Contato"
+                >
+                  Entre em contato e peça seu orçamento
+                </AnchorLink>
+              </p>
             </div>
-          </div>
-        </div>
-      </div>
+          </Col>
+        </Row>
+      </Container>
     </section>
   </>
 );

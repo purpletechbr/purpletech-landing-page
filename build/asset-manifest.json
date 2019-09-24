@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.css": "/static/css/main.5ba1d2b3.chunk.css",
+    "main.js": "/static/js/main.e4f42aff.chunk.js",
+    "main.js.map": "/static/js/main.e4f42aff.chunk.js.map",
+    "runtime~main.js": "/static/js/runtime~main.3814d842.js",
+    "runtime~main.js.map": "/static/js/runtime~main.3814d842.js.map",
+    "static/css/2.d445911b.chunk.css": "/static/css/2.d445911b.chunk.css",
+    "static/js/2.dfe70a46.chunk.js": "/static/js/2.dfe70a46.chunk.js",
+    "static/js/2.dfe70a46.chunk.js.map": "/static/js/2.dfe70a46.chunk.js.map",
+    "index.html": "/index.html",
+    "precache-manifest.bb8c38721ea160a86479e1a50952879d.js": "/precache-manifest.bb8c38721ea160a86479e1a50952879d.js",
+    "service-worker.js": "/service-worker.js",
+    "static/css/2.d445911b.chunk.css.map": "/static/css/2.d445911b.chunk.css.map",
+    "static/css/main.5ba1d2b3.chunk.css.map": "/static/css/main.5ba1d2b3.chunk.css.map",
+    "static/media/cloud-computing.svg": "/static/media/cloud-computing.2d6effdd.svg",
+    "static/media/desenvolvimento-app.png": "/static/media/desenvolvimento-app.a0e1f175.png",
+    "static/media/desenvolvimento-web.png": "/static/media/desenvolvimento-web.39e5a97b.png",
+    "static/media/font-awesome.min.css": "/static/media/fontawesome-webfont.fee66e71.woff",
+    "static/media/gamification.svg": "/static/media/gamification.ae30030d.svg",
+    "static/media/graphic-design.svg": "/static/media/graphic-design.c2da52b0.svg",
+    "static/media/home_webdeveloper.jpg": "/static/media/home_webdeveloper.9bea026d.jpg",
+    "static/media/logo-white.svg": "/static/media/logo-white.98255b85.svg",
+    "static/media/logo.svg": "/static/media/logo.e58c6fe9.svg",
+    "static/media/nucleo.css": "/static/media/nucleo-icons.f82ec6ba.ttf",
+    "static/media/www.svg": "/static/media/www.86cbef1f.svg"
+  }
+}

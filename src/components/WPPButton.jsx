@@ -8,9 +8,9 @@ const WPPButton = () => (
       className="wpp"
       target="_blank"
     >
-      <i className="fa fa-whatsapp icon-wpp"></i>
+      <i className="fa fa-whatsapp icon-wpp" />
     </a>
   </>
-)
+);
 
 export default WPPButton;

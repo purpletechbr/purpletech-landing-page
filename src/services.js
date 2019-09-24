@@ -1,9 +1,6 @@
 const axios = require('axios');
 
-const baseURL = process.env.NODE_ENV === 'production' ?
-  'https://app.purpletech.com.br' : 'http://localhost:3000'
-
-axios.defaults.baseURL = baseURL;
+axios.defaults.baseURL = 'https://app.purpletech.com.br';
 axios.defaults.headers.post['Content-Type'] = 'application/json';
 
 module.exports = {
@@ -11,15 +8,13 @@ module.exports = {
     return new Promise((resolve, reject) => axios
       .post('/sendMessage', data)
       .then((response) => resolve(response))
-      .catch((err) => reject(err))
-    );
+      .catch((err) => reject(err)));
   },
 
   getPortfolio() {
     return new Promise((resolve, reject) => axios
       .get('/getPortfolio')
       .then((response) => resolve(response))
-      .catch((err) => reject(err))
-    );
+      .catch((err) => reject(err)));
   },
 };
