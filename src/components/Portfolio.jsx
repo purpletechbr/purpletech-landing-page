@@ -64,7 +64,7 @@ function Portfolio() {
                 Portfólio
               </h2>
               <p className="lead text-muted">
-                Confira alguns projetos feitos pela PurpleTech. Nossa equipe
+                Confira alguns projetos feitos pela PurpleTech. Nossa equipe está preparada para atender suas necessidas e criar o produto ideal para você e sua empresa.
               </p>
             </Col>
           </Row>
